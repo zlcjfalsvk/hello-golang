@@ -6,6 +6,11 @@ import "fmt"
 // factored import === import "fmt"
 
 func main() {
+	// reserved()
+	types()
+}
+
+func reserved() {
 	// PrintLn 은 fmt package 에서 export 된 함수이다
 	// 이처럼 go 에서는 export 하기 위해선 함수 함수의 맨 앞자를 대문자로 정의 해야 export
 	fmt.Println("Hello Golang")
@@ -28,5 +33,22 @@ func main() {
 
 	//Gugudan(9)
 	//fmt.Println(Sqrt(2))
+}
+
+func types() {
+	var nullArr []string //nil slices
+	// nullArr is nil
+	// p is not nil
+	p := &nullArr // &[]
+
+	fmt.Println(IsNil(p))  // false
+	fmt.Println(IsNil(*p)) // true
+
+	// Array는 공간의 크기를 줄 수 있음
+	// ex) var intArr [3]int
+	// ex) intArr := [3]int {1,2,3}
+	//		refIntArr := intArr[1:2] // Slices - Slices는 참조 전용이기 때문에 값을 저장할 수 없다.
+	var intArr []int // Slices
+	fmt.Println(append(intArr, 2))
 
 }
