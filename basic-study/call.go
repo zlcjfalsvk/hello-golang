@@ -1,10 +1,20 @@
 package basicStudy
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+type Vertex struct {
+	X, Y float64
+	// 밑의 문법을 이용하면 구조체 이용 시 Key Field를 명시 해줘야 함
+	// https://stackoverflow.com/questions/48381241/what-is-the-purpose-of-a-field-named-underscore-containing-an-empty-struct
+	//_ struct{}
+}
 
 func Call() {
-	reserved()
-	types()
+	//reserved()
+	//types()
 }
 
 func reserved() {
@@ -49,4 +59,36 @@ func types() {
 	fmt.Println(append(intArr, 2))
 
 	Slices()
+}
+
+func Method() {
+	//v := Vertex{3, 4}
+	//v.Scale(10)
+	//fmt.Println(Abs(v))
+	//
+	//f := MyFloat(-math.Sqrt2)
+	//fmt.Println(f.Abs())
+
+	v := Vertex{3, 4}
+	v.Scale(2)
+	ScaleFunc(&v, 10)
+
+	p := &Vertex{4, 3}
+	p.Scale(3)
+	ScaleFunc(p, 8) // p 선언에 포인터로
+	fmt.Println(v, p)
+
+}
+
+func Interface() {
+	var i I
+
+	i = &T{"Hello"}
+	describe(i)
+	i.M()
+
+	i = F(math.Pi)
+	describe(i)
+	i.M()
+
 }

@@ -30,12 +30,6 @@ func Slices() {
 
 func Map() {
 	fmt.Println("Map Function")
-	type Vertex struct {
-		Lat, Long float64
-		// 밑의 문법을 이용하면 구조체 이용 시 Key Field를 명시 해줘야 함
-		// https://stackoverflow.com/questions/48381241/what-is-the-purpose-of-a-field-named-underscore-containing-an-empty-struct
-		//_ struct{}
-	}
 
 	var m map[string]Vertex // nil
 
