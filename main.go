@@ -51,4 +51,5 @@ func types() {
 	var intArr []int // Slices
 	fmt.Println(append(intArr, 2))
 
+	Slices()
 }
