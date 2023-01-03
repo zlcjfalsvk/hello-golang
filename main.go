@@ -2,7 +2,7 @@
 
 package main
 
-import basicStudy "./basic-study"
+import basicStudy "basic-study"
 
 func main() {
 	basicStudy.Call()
