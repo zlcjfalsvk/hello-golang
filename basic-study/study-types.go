@@ -1,4 +1,4 @@
-package main
+package basicStudy
 
 import (
 	"fmt"
@@ -11,6 +11,7 @@ func IsNil[T any](i T) bool {
 }
 
 func Slices() {
+	fmt.Println("Slices Function")
 	var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
 	// range arr => [index, value]
 	for i, v := range pow {
@@ -19,14 +20,16 @@ func Slices() {
 
 	pow2 := make([]int, 10)
 	for i := range pow { // for i, _ := range pow {
-		pow[i] = 1 << uint(i) // == 2**i
+		pow2[i] = 1 << uint(i) // == 2**i
 	}
+
 	for _, value := range pow2 {
 		fmt.Printf("%d\n", value)
 	}
 }
 
 func Map() {
+	fmt.Println("Map Function")
 	type Vertex struct {
 		Lat, Long float64
 		// 밑의 문법을 이용하면 구조체 이용 시 Key Field를 명시 해줘야 함

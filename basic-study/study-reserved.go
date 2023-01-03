@@ -1,4 +1,4 @@
-package main
+package basicStudy
 
 import "fmt"
 
@@ -13,7 +13,7 @@ func Strings(x, y string, z byte) (string, string, float64) {
 // Split
 // naked return return value가 없지만 return type 에 변수가 정의 됨
 // 짧은 함수에서 사용되어야 가독성이 좋음
-func Split(sum int) (x, y int) {
+func plit(sum int) (x, y int) {
 	x = sum * 4 / 9
 	y = sum - x
 	return
